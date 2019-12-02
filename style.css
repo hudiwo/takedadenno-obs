@@ -1,0 +1,306 @@
+@charset "shift_jis";
+
+
+/*全体の設定
+-------------------------------------------------------------------------------------
+■文字サイズは75%部分で変更できます。%指定でなく、pxなどでもOK。
+■文字色（白）は#FFFFFF部分で変更できます。
+-------------------------------------------------------------------------------------*/
+body {
+	font-family: "メイリオ", "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3";
+	font-size: 75%;
+	line-height: 2;
+	color: #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	background: #2e2e2e url(images/bg.gif) repeat-x top;
+}
+
+
+
+/*細々の設定（あまり変更する部分はありません）
+-------------------------------------------------------------------------------------*/
+
+h1,h2,h3,p,ul,li{
+	margin: 0px;
+	padding: 0px;
+}
+
+ul{
+	list-style-type: none;
+}
+
+img {
+	border: none;
+	vertical-align: bottom;
+}
+
+.look {
+	color: #FF0000;
+	background: #000000;
+}
+
+.look2 {
+	color: #FFFFFF;
+	background: #2e0004;
+}
+
+.redbox {
+	color: #A90310;
+}
+
+.color1 {
+	color: #FF0000;
+}
+
+
+/*リンクカラー設定
+-------------------------------------------------------------------------------------
+■aの部分がリンクですよ～という部分の設定。下線を外したいなら、「text-decoration: none;」を
+1行追加すればOK。
+■a:hoverはカーソルが乗った時の設定。ここでは文字色を赤にして背景を黒にしています。
+-------------------------------------------------------------------------------------*/
+a {
+	color: #FFFFFF;
+}
+
+a:hover {
+	color: #ad0a17;
+	background: #000000;
+}
+
+
+
+/*コンテナー（特に変更する必要はありません）
+-------------------------------------------------------------------------------------*/
+#container {
+	background: #2e2e2e url(images/container_bg.gif) no-repeat center top;
+	text-align: left;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 4px;
+	padding-left: 4px;
+	width: 760px;
+}
+
+
+
+/*ヘッダー
+-------------------------------------------------------------------------------------*/
+#header {
+	position: relative;
+	background: url(images/header_bg.gif) repeat-x;
+}
+#header h1 {
+	font-size: 11px;
+	font-weight: normal;
+	line-height: 13px;
+	position: absolute;
+	left: 10px;
+	top: 15px;
+}
+#header #logo {
+	vertical-align: top;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+}
+
+
+
+
+/*右上のナビメニュー
+-------------------------------------------------------------------------------------*/
+#nav {
+	position: absolute;
+	top: 7px;
+	right: 10px;
+	line-height: 1.2;
+	background: url(images/nav_bg.gif) no-repeat left top;
+	padding-left: 30px;
+	height: 22px;
+	font-size: 11px;
+}
+#nav li {
+	float: left;
+	width: 8em; /*IE7のメイリオフォントだと6em（6文字）分にしか表示されないので注意*/
+}
+#nav li a {
+	background: url(images/arrow1.gif) no-repeat left center;
+	padding-left: 20px;
+}
+
+
+
+/*メインメニュー
+-------------------------------------------------------------------------------------
+■メニューの背景部分は#menu部分で行います。
+■メニュー同士の境界線は「#menu li」のbackgroundで入れています。
+■メニューのリンク設定が「#menu li a」部分。文字色を#000000(黒)で文字サイズを13pxで固定。
+最大文字数(8文字)というのは「width: 8em;」部分で決めています。自分が使うメニューの文字数の
+最大文字数に合わせて変更するといいでしょう。最大文字数が5文字だったら5emとするわけです。
+■カーソルオーバー時は「#menu li a:hover」で設定。ここでは背景画像と文字色を変えています。
+-------------------------------------------------------------------------------------*/
+#menu {
+	background: #CCCCCC url(images/menu_bg.gif) no-repeat;
+	height: 40px;
+}
+
+#menu li {
+	background: url(images/menu_bg_line.gif) no-repeat right;
+	float: left;
+	height: 40px;
+}
+
+#menu li a {
+	color: #000000;
+	text-decoration: none;
+	font-size: 13px;
+	display: block;
+	width: 8em;
+	text-align: center;
+	padding-right: 5px;
+	padding-left: 5px;
+	line-height: 40px;
+}
+
+#menu li a:hover {
+	background: url(images/menu_bg_over.gif);
+	color: #FFFFFF;
+}
+
+
+
+/*コンテンツ枠
+-------------------------------------------------------------------------------------*/
+#contents {
+	background: url(images/contents_bg.gif) repeat-y;
+}
+
+
+
+/*メインコンテンツ（文章が入っているブロック）
+-------------------------------------------------------------------------------------
+■見出しの設定は「#main h2」で行います。ここでは文字サイズを13pxに固定し、背景の画像を
+入れています。
+■メイン写真は「#main-img」で設定。ここで設定しているのは、写真本体の設定でなく、
+下に入っている9pxのグラデーション部分の設定になります。なので、html側のメイン写真に
+id="main-img" を追加すれば画像本体に加工する事なくグラデーションが入るというわけです。
+-------------------------------------------------------------------------------------*/
+#main {
+	float: left;
+	width: 490px;
+	display: inline;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	margin-left: 12px;
+}
+
+#main h2 {
+	font-size: 13px;
+	line-height: 31px;
+	background: #000000 url(images/midashi_bg.gif) no-repeat;
+	height: 33px;
+	width: 475px;
+	padding-left: 15px;
+}
+
+#main p {
+	margin: 0.5em 10px 1em;
+}
+
+#main-img {
+	background: url(images/main_img_bottom.gif) no-repeat bottom;
+	padding-bottom: 9px;
+}
+
+
+
+/*サブコンテンツ（右側のブロック）
+-------------------------------------------------------------------------------------
+■サブコンテンツの見出しは「#sub h3」で行います。背景色が「#3C0005」で線の設定が
+「border: 1px solid #000000;」部分。1pxの直線(solid)を#000000の色で入れているという事になります。
+結果、背景の黒と同じ色になってしまい分からないのですが、他のカラータイプで色をつけているので、
+設定をそのまま残しておきました。
+■サブコンテンツのメニューパーツは「.sub-menu a」で行います。
+「display: block」にしておくと、文字の上にカーソルがのらなくてもブロック内でリンクの
+反応をするようになるので来訪者に親切です。「.sub-menu a:hover」でカーソルオーバー時の
+背景色と文字色を変更しています。
+-------------------------------------------------------------------------------------*/
+#sub {
+	float: right;
+	width: 220px;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	display: inline;
+	margin-right: 12px;
+	color: #CCCCCC;
+}
+
+#sub p {
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+}
+
+#sub h3 {
+	font-size: 100%;
+	background: #3C0005;
+	border: 1px solid #000000;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.sub-menu a {
+	background: #240003;
+	text-decoration: none;
+	display: block;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+	width: 218px;
+	letter-spacing: 0.5em;
+	text-align: center;
+	color: #b0b0b0;
+}
+
+.sub-menu a:hover {
+	background: #520007;
+	color: #FFFFFF;
+}
+
+
+
+/*フッター
+-------------------------------------------------------------------------------------*/
+#footer {
+	clear: both;
+	background: url(images/footer_bg.gif) no-repeat center;
+	height: 80px;
+	padding-top: 20px;
+	font-size: 11px;
+	width: 768px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+/*clearfix（変更しない）
+-------------------------------------------------------------------------------------*/
+#contents:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+
+#contents { display: inline-block; }
+
+/* Hides from IE-mac \*/
+*html #contents { height: 1%; }
+#contents { display: block; }
+/* End hide from IE-mac */
